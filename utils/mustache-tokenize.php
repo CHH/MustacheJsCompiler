@@ -3,6 +3,7 @@
 require __DIR__ . '/../vendor/autoload.php';
 
 $mustache = new Phly\Mustache\Mustache;
+$mustache->setTemplatePath(dirname($argv[1]));
 $tokens = $mustache->getLexer()->compile(file_get_contents($argv[1]), $argv[1]);
 
 $rc = new ReflectionClass(\Phly\Mustache\Lexer::class);

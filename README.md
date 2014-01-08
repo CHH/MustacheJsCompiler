@@ -53,5 +53,4 @@ We can render the template using this code:
 
 # Unimplemented Mustache Features
 
-* Partials
 * Filters

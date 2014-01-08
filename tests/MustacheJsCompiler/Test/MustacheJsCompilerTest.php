@@ -36,6 +36,19 @@ class MustacheJsCompilerTest extends \PHPUnit_Framework_TestCase
                 'simple',
                 '{name: function() { return "John"; }}',
                 "Hello John!\n\n"
+            ],
+            [
+                'partials',
+                json_encode(['users' => [
+                    ['name' => 'Jim', 'age' => 33],
+                    ['name' => 'John', 'age' => 24],
+                    ['name' => 'Tim', 'age' => 58]
+                ]]),
+                join("\n\n", [
+                    "Hi I'm Jim and I'm 33 years old!",
+                    "Hi I'm John and I'm 24 years old!",
+                    "Hi I'm Tim and I'm 58 years old!"
+                ]) . "\n\n\n"
             ]
         ];
     }

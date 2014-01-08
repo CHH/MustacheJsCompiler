@@ -82,10 +82,13 @@ class MustacheJsCompiler
             case Lexer::TOKEN_SECTION:
                 $js .= $this->renderSection($token);
                 break;
-            case Lexer::TOKEN_SECTION_INVERT;
+            case Lexer::TOKEN_SECTION_INVERT:
                 $js .= "if(!__get(stack, '{$token[1]['name']}')) {";
                 $js .= $this->getJsCode($token[1]['content']);
                 $js .= '}'; // end if
+                break;
+            case Lexer::TOKEN_PARTIAL:
+                $js .= $this->getJsCode($token[1]['tokens']);
                 break;
             }
         }
