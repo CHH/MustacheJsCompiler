@@ -44,7 +44,7 @@ We can render the template using this code:
 <div id="user-widget"></div>
 <script>
   (function() {
-    var template = <?php echo $compiler->compile('user/show') ?>
+    var template = <?php echo $compiler->compile('user/show') ?>;
     var widget = document.getElementById('user-widget');
     widget.innerHTML = template({name: "Christoph"});
   })();
