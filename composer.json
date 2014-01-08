@@ -1,17 +1,18 @@
 {
-    "name": "MustacheJsCompiler",
-    "description": "You totally should use this awesome package.",
+    "name": "chh/mustache-js-compiler",
+    "description": "Compiles server-side Mustache templates to client-side JS functions",
     "authors": [
         {
             "name": "Christoph Hochstrasser",
             "email": "christoph.hochstrasser@gmail.com"
         }
     ],
+    "license": "MIT",
     "keywords": [
-
+        "js", "mustache"
     ],
     "require": {
-        "php": ">=5.3.3",
+        "php": ">=5.3.8",
         "phly/mustache": "~1.0"
     },
     "require-dev": {
