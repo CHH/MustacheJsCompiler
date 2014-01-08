@@ -6,7 +6,7 @@ Compiles server-side Mustache templates to self-sufficient client-side JS functi
 
 # Install
 
-  composer require 'chh/mustache-js-compiler':~1.0@dev
+    composer require 'chh/mustache-js-compiler':~1.0@dev
 
 # Usage
 
@@ -37,6 +37,8 @@ The template looks like this:
 {{! user/show.mustache }}
 Hi {{name}}!
 ```
+
+We can render the template using this code:
 
 ```php
 <div id="user-widget"></div>
