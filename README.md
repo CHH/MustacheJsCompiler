@@ -27,7 +27,7 @@ Then create the compiler and pass it the Mustache environment:
 $jsCompiler = new CHH\MustacheJsCompiler\MustacheJsCompiler($mustache);
 ```
 
-The compiler has a `compile` method which has works the same way as `$mustache->tokenize()`. It
+The compiler has a `compile` method which works the same way as `$mustache->tokenize()`. It
 looks up the template name in the template path, or uses the passed Mustache code. The `compile`
 method returns a self-sufficient JavaScript function which executes the template.
 
