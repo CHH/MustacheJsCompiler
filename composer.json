@@ -1,6 +1,6 @@
 {
     "name": "chh/mustache-js-compiler",
-    "description": "Compiles server-side Mustache templates to client-side JS functions",
+    "description": "Compiles server-side Mustache templates to self-sufficient client-side JS functions",
     "authors": [
         {
             "name": "Christoph Hochstrasser",

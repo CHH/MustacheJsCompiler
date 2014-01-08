@@ -22,6 +22,10 @@ use Phly\Mustache\Lexer;
  *         var widget = document.getElementById('some-widget');
  *         widget.innerHTML = showUserTemplate({name: "John Doe"});
  *     </script>
+ *
+ * The generated JS is completely self-sufficient and thus doesn't need any
+ * libraries to work. This means a small amount of utilities is included in every function,
+ * a good JavaScript optimizer should be able to take care of the duplication though.
  */
 class MustacheJsCompiler
 {
@@ -50,6 +54,9 @@ class MustacheJsCompiler
         return $js;
     }
 
+    /**
+     * @todo remove whitespace in JS code
+     */
     private function getJsCode(array $tokens)
     {
         $js = "";
