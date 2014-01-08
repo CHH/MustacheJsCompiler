@@ -1,0 +1,25 @@
+{
+    "name": "MustacheJsCompiler",
+    "description": "You totally should use this awesome package.",
+    "authors": [
+        {
+            "name": "Christoph Hochstrasser",
+            "email": "christoph.hochstrasser@gmail.com"
+        }
+    ],
+    "keywords": [
+
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "phly/mustache": "~1.0"
+    },
+    "require-dev": {
+        "symfony/process": "~2.1"
+    },
+    "autoload": {
+        "psr-0": {
+            "CHH\\MustacheJsCompiler": "lib\/"
+        }
+    }
+}
