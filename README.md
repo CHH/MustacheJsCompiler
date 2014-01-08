@@ -10,14 +10,18 @@ Compiles server-side Mustache templates to self-sufficient client-side JS functi
 
 # Usage
 
-First you need a Mustache environment. You could take this for example already by your application
-for easy template sharing between server and client:
+The compiler needs an instance of `Phly\Mustache\Mustache` to function.
+
+If you intend to share templates between the server and the client,
+than it's recommended to use the same Mustache instance which your
+application uses so the template paths are setup the same way (for
+partials to be compiled correctly).
 
 ```php
 <?php
 
 $mustache = new Phly\Mustache\Mustache;
-// or
+// or use the same Mustache environment than your application:
 $mustache = $app['mustache'];
 ```
 
@@ -44,7 +48,7 @@ We can render the template using this code:
 <div id="user-widget"></div>
 <script>
   (function() {
-    var template = <?php echo $compiler->compile('user/show') ?>;
+    var template = <?php echo $jsCompiler->compile('user/show') ?>;
     var widget = document.getElementById('user-widget');
     widget.innerHTML = template({name: "Christoph"});
   })();
